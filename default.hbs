@@ -17,6 +17,9 @@
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
+    <!-- Memberstack --> 
+    <script src="https://api.memberstack.io/static/memberstack.js?custom" data-memberstack-id="8aacbc0e7bff586a9c06da44a715b764"></script> 
+
 </head>
 <body class="{{body_class}}">
 
@@ -125,6 +128,8 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+
+    {{!-- <script src="{{asset "built/members.min.js"}}"></script> --}}
 
 </body>
 </html>
