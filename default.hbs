@@ -18,7 +18,10 @@
     {{ghost_head}}
 
     <!-- Memberstack --> 
-    <script src="https://api.memberstack.io/static/memberstack.js?custom" data-memberstack-id="8aacbc0e7bff586a9c06da44a715b764"></script> 
+    {{!-- <script src="https://api.memberstack.io/static/memberstack.js?custom" data-memberstack-id="8aacbc0e7bff586a9c06da44a715b764"></script>  --}}
+
+    <!-- Pico -->
+    {{!-- <script>(function(p,i,c,o){var n=new Event("pico-init");i[p]=i[p]||function(){(i[p].queue=i[p].queue||[]).push(arguments)},i.document.addEventListener("pico-init",function(e){var t=i.Pico.getInstance(e,{publisherId:o,picoInit:n},i);t.handleQueueItems(i[p].queue),i[p]=function(){return t.handleQueueItems([arguments])}},!1);var e=i.document.createElement("script"),t=i.document.getElementsByTagName("script")[0];e.async=1,e.src=c,e.onload=function(e){return i.Pico.getInstance(e,{publisherId:o,picoInit:n},i)},t.parentNode.insertBefore(e,t)})("pico",window,"https://widget.pico.tools/wrapper.min.js","ab8c69e6-f0a0-4596-99b4-c31e6a05fbd4");</script> --}}
 
 </head>
 <body class="{{body_class}}">
@@ -45,7 +48,7 @@
 
     {{!-- The big email subscribe modal content --}}
     {{#if @labs.members}}
-    <div class="subscribe-success-message">
+    {{!-- <div class="subscribe-success-message">
         <a class="subscribe-close" href="javascript:;"></a>
         You've successfully subscribed to {{@site.title}}!
     </div>
@@ -78,7 +81,7 @@
                 </form>
             </div>
         </div>
-    </div>
+    </div> --}}
     {{/if}}
 
     {{!-- jQuery, required for fitvids --}}
@@ -129,7 +132,22 @@
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
 
-    {{!-- <script src="{{asset "built/members.min.js"}}"></script> --}}
+    <script src="{{asset "built/members.min.js"}}"></script>
+
+
+    <!-- Pico -->
+    <!--script>
+    var pageInfo = {
+        article: true,
+        post_id: "e940fd16-b7cd-11ea-b3de-0242ac130004",
+        post_type: "article",
+        taxonomies: { tags: ["red","blue"], categories: ["primary-colors"]},
+        url: window.location.href
+    };
+
+    window.pico('visit', pageInfo);
+    </script-->
+
 
 </body>
 </html>

@@ -24,12 +24,12 @@ into the {body} of the default.hbs template --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
 
-        <a href="#/ms/login">Memberstack Login</a>
+        {{!-- <a href="#/ms/login">Memberstack Login</a>
 
-        <a href="#/ms/profile">Memberstack Profile</a>
+        <a href="#/ms/profile">Memberstack Profile</a> --}}
 
         <div class="post-feed">
-            {{#foreach posts}}
+            {{#foreach posts visibility="all"}}
 
                 {{!-- The tag below includes the markup for each post - partials/post-card.hbs --}}
                 {{> "post-card"}}
